@@ -1,174 +1,51 @@
-/* ================================
-   AJUSTES GENERALES XV (EDITORIAL)
-================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  background-color: #fde6ee;
+  background: #f7e6ea;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Más aire entre secciones */
-section {
-  padding: 70px 22px;
-}
-
-/* Texto más elegante */
-p {
-  letter-spacing: 0.3px;
-}
-
-/* ================================
-   HERO – MÁS IMPACTO
-================================ */
-
-.hero {
-  height: 100vh;
-  background: url("DSC_6656.png") center/cover no-repeat;
-  position: relative;
-}
-
-/* ================================
-   SECCIONES ROSA – CAJA SUAVE
-================================ */
-
-/* Hace que el contenido flote sobre el fondo rosa */
-section:not(.hero):not(.gallery):not(.quote-section) {
-  position: relative;
-}
-
-section:not(.hero):not(.gallery):not(.quote-section)::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.65);
-  z-index: 0;
-}
-
-section > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* ================================
-   TITULOS
-================================ */
-
-h2 {
-  letter-spacing: 1px;
-}
-
-h2::after {
-  content: "";
+/* imágenes full ancho */
+img {
+  width: 100%;
   display: block;
-  width: 60px;
-  height: 2px;
-  background: #e8a1b8;
-  margin: 12px auto 0;
-  border-radius: 2px;
 }
 
-/* ================================
-   CONTADOR – MÁS XV
-================================ */
-
-#timer div {
-  box-shadow: 0 6px 18px rgba(200,107,138,0.25);
+/* portada */
+.hero img {
+  height: 100vh;
+  object-fit: cover;
 }
 
-#timer span {
-  font-family: 'Playfair Display', serif;
+/* secciones */
+.section {
+  margin: 40px 0;
 }
 
-/* ================================
-   GALERÍA – ESTILO EDITORIAL
-================================ */
-
-.gallery {
-  padding-top: 90px;
-  padding-bottom: 90px;
-}
-
-.gallery .photos {
-  gap: 20px;
-}
-
+/* galería */
 .gallery img {
-  border-radius: 18px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+  border-radius: 14px;
 }
 
-/* ================================
-   FRASE – MÁS DELICADA
-================================ */
-
-.quote-section {
-  margin-top: 60px;
-  margin-bottom: 60px;
+/* contador */
+.countdown {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f3d3dc;
 }
 
-.quote-section p {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.15rem;
-  line-height: 1.7;
+.countdown h2 {
+  font-family: 'Signatie', cursive;
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
-/* ================================
-   BOTONES – MÁS FINOS
-================================ */
-
-.btn {
-  letter-spacing: 1px;
+#timer {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
 }
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-/* ================================
-   FOOTER
-================================ */
-
-footer {
-  letter-spacing: 1px;
-}
-
-/* ================================
-   MÚSICA – MÁS ELEGANTE
-================================ */
-
-.play-btn {
-  border-width: 3px;
-}
-
-.play-btn:hover {
-  transform: scale(1.12);
-}
-
-/* ================================
-   MOBILE FINO
-================================ */
-
-@media (max-width: 480px) {
-
-  section {
-    padding: 60px 18px;
-  }
-
-  .title {
-    font-size: 2rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-  }
-
-  .quote-section p {
-    font-size: 1.05rem;
-  }
-}
-
-.hero h1,
-.hero .subtitle,
-.hero .date {
-  display: none;
-}
-
