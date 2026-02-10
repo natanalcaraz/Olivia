@@ -1,40 +1,26 @@
-.countdown-section {
-    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
-    padding: 40px 20px;
-    text-align: center;
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 40px;
+  border: 2px solid rgba(255,255,255,0.7);
+  border-radius: 20px;
 }
 
-.countdown-section h2 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    color: #fff;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.25);
+.scroll-indicator span {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  margin: 6px auto;
+  animation: scroll 1.5s infinite;
 }
 
-.countdown {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.countdown div {
-    background: rgba(255,255,255,0.25);
-    border-radius: 15px;
-    padding: 15px 20px;
-    min-width: 90px;
-    backdrop-filter: blur(6px);
-}
-
-.countdown span {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #fff;
-}
-
-.countdown small {
-    font-size: 0.9rem;
-    color: #fff;
-    opacity: 0.9;
+@keyframes scroll {
+  0% { opacity: 0; transform: translateY(0); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(12px); }
 }
