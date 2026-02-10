@@ -23,7 +23,7 @@
 .invitation,
 .event,
 .countdown {
-  background-image: url("images/fondo-rosa.png");
+  background-image: url("fondo rosa.png");
   background-repeat: repeat;
   background-size: 320px auto;
 }
