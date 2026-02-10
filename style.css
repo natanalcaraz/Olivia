@@ -11,10 +11,8 @@
 ================================ */
 :root {
   --rosa-texto: #ff869c;
-  --rosa-fondo: #fde6ee;
-  --rosa-claro: #fff2f6;
+  --texto-secundario: #6a4a4a;
   --dorado-suave: #c9a76a;
-  --texto-suave: #6a4a4a;
 }
 
 /* ================================
@@ -31,8 +29,8 @@
 ================================ */
 body {
   font-family: 'Playfair Display', serif;
-  background-color: var(--rosa-fondo);
-  color: var(--texto-suave);
+  background-color: #ffffff;   /* 👈 FONDO BLANCO */
+  color: var(--texto-secundario);
 }
 
 /* ================================
@@ -53,11 +51,7 @@ body {
   padding: 100px 20px;
   text-align: center;
   overflow: hidden;
-}
-
-/* Fondo rosa con textura */
-.rosa {
-  background: url("img/textura-rosa.png") repeat;
+  background-color: #ffffff;   /* 👈 BLANCO */
 }
 
 /* ================================
@@ -66,7 +60,7 @@ body {
 .flor {
   position: absolute;
   width: 140px;
-  opacity: 0.9;
+  opacity: 0.95;
   pointer-events: none;
 }
 
@@ -147,7 +141,7 @@ body {
 
 #timer small {
   font-size: 0.75rem;
-  color: var(--texto-suave);
+  color: var(--texto-secundario);
 }
 
 /* ================================
@@ -175,4 +169,3 @@ body {
     font-size: 1rem;
   }
 }
-
