@@ -1,335 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Olivia Caniza - Mis XV Años</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Olivia XV Años</title>
 
-  <!-- FUENTES -->
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Fuente Signatie -->
+  <link href="https://fonts.cdnfonts.com/css/signatie" rel="stylesheet">
 
-  <style>
-  /* RESET */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: 'Quicksand', sans-serif;
-    background-color: #fde6ee;
-    color: #5a2a3a;
-    overflow-x: hidden;
-  }
-
-  /* --- PORTADA --- */
-  .hero {
-    background: url('hero.jpg') center/cover no-repeat;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    text-align: center;
-  }
-
-  .hero .overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.35);
-  }
-
-  .title {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    color: #fff;
-    z-index: 1;
-  }
-
-  .subtitle {
-    font-size: 1.4rem;
-    color: #fff;
-    margin-top: 0.5rem;
-    z-index: 1;
-    letter-spacing: 2px;
-  }
-
-  .date {
-    margin-top: 1.2rem;
-    background: linear-gradient(90deg, #e8a1b8, #c86b8a);
-    color: white;
-    padding: 10px 25px;
-    border-radius: 30px;
-    z-index: 1;
-    font-weight: bold;
-  }
-
-  /* --- SECCIONES --- */
-  section {
-    padding: 60px 20px;
-    text-align: center;
-    background-image: url("fondo-rosa.png");
-    background-repeat: repeat;
-    background-size: 320px auto;
-  }
-
-  h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    color: #c86b8a;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    font-size: 1.05rem;
-    line-height: 1.6;
-  }
-
-  .btn {
-    background: linear-gradient(90deg, #e8a1b8, #c86b8a);
-    color: white;
-    text-decoration: none;
-    padding: 10px 25px;
-    border-radius: 25px;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 15px;
-    transition: 0.3s;
-  }
-
-  .btn:hover {
-    opacity: 0.85;
-  }
-
-  /* --- CONTADOR --- */
-  #timer {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-  }
-
-  #timer div {
-    background: rgba(255,255,255,0.85);
-    border: 2px solid #e8a1b8;
-    border-radius: 14px;
-    padding: 12px 18px;
-    min-width: 90px;
-  }
-
-  #timer span {
-    font-size: 2rem;
-    color: #c86b8a;
-    display: block;
-    font-weight: bold;
-  }
-
-  /* --- GALERÍA --- */
-  .gallery .photos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    margin-top: 25px;
-  }
-
-  .gallery img {
-    width: 100%;
-    border-radius: 14px;
-    border: 3px solid #e8a1b8;
-    transition: transform 0.3s ease;
-  }
-
-  .gallery img:hover {
-    transform: scale(1.03);
-  }
-
-  /* --- FRASE --- */
-  .quote-section {
-    background: linear-gradient(90deg, #e8a1b8, #c86b8a);
-    color: #fff;
-    border-radius: 16px;
-    margin: 40px 20px;
-    padding: 40px 25px;
-  }
-
-  .quote-section p {
-    font-size: 1.1rem;
-  }
-
-  /* --- RSVP --- */
-  .rsvp strong {
-    display: block;
-    margin-top: 10px;
-    font-size: 1.1rem;
-  }
-
-  /* --- FOOTER --- */
-  footer {
-    background-color: #c86b8a;
-    color: white;
-    padding: 15px;
-    font-size: 0.9rem;
-  }
-
-  /* --- ANIMACIONES --- */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeIn 1.2s ease forwards;
-  }
-
-  .slide-up {
-    opacity: 0;
-    transform: translateY(50px);
-    animation: slideUp 1s ease forwards;
-  }
-
-  @keyframes fadeIn {
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes slideUp {
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* --- MÚSICA --- */
-  .music-player {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-  }
-
-  .play-btn {
-    background-color: #ffffff;
-    border: 2px solid #c86b8a;
-    border-radius: 50%;
-    font-size: 1.8rem;
-    padding: 15px 18px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-  }
-
-  .playing {
-    background-color: #c86b8a;
-    color: white;
-  }
-
-  /* --- MOBILE --- */
-  @media (max-width: 768px) {
-    .title { font-size: 2.2rem; }
-    .subtitle { font-size: 1.1rem; }
-    #timer span { font-size: 1.5rem; }
-    .gallery .photos { grid-template-columns: 1fr; }
-  }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<!-- PORTADA -->
-<section class="hero fade-in">
-  <div class="overlay"></div>
-  <h1 class="title">Olivia Caniza</h1>
-  <p class="subtitle">Mis XV Años</p>
-  <div class="date">7 de Marzo de 2026</div>
-</section>
+  <!-- PORTADA -->
+  <section class="hero">
+    <img src="img/portada.jpg" alt="Olivia XV Años">
+  </section>
 
-<!-- INVITACIÓN -->
-<section class="slide-up">
-  <h2>Mis XV Años</h2>
-  <p>
-    Con la bendición de Dios y mis padres,<br>
-    los invito a celebrar conmigo este momento tan especial.
-  </p>
-</section>
+  <!-- INVITACIÓN -->
+  <section class="section">
+    <img src="img/misa.jpg" alt="Invitación">
+  </section>
 
-<!-- MISA -->
-<section class="slide-up">
-  <h2>Misa de acción de gracias</h2>
-  <p>Sábado 7 de marzo · 19:30 hs</p>
-  <a href="#" class="btn">Ver ubicación</a>
-</section>
+  <!-- RECEPCIÓN -->
+  <section class="section">
+    <img src="img/recepcion.jpg" alt="Recepción">
+  </section>
 
-<!-- CONTADOR -->
-<section class="countdown slide-up">
-  <h2>Faltan...</h2>
-  <div id="timer">
-    <div><span id="days">00</span>Días</div>
-    <div><span id="hours">00</span>Horas</div>
-    <div><span id="minutes">00</span>Min</div>
-    <div><span id="seconds">00</span>Seg</div>
-  </div>
-</section>
+  <!-- GALERÍA -->
+  <section class="gallery">
+    <img src="img/galeria1.jpg">
+    <img src="img/galeria2.jpg">
+  </section>
 
-<!-- GALERÍA -->
-<section class="gallery fade-in">
-  <h2>Momentos de mi sesión</h2>
-  <div class="photos">
-    <img src="galeria1.jpg">
-    <img src="galeria2.jpg">
-    <img src="galeria3.jpg">
-    <img src="galeria4.jpg">
-  </div>
-</section>
+  <!-- COUNTDOWN -->
+  <section class="countdown">
+    <h2>Solo faltan</h2>
+    <div id="timer">
+      <span id="days">00</span>d :
+      <span id="hours">00</span>h :
+      <span id="minutes">00</span>m :
+      <span id="seconds">00</span>s
+    </div>
+  </section>
 
-<!-- FRASE -->
-<section class="quote-section slide-up">
-  <p>
-    Hay momentos que se guardan en el corazón para siempre.<br>
-    Gracias por ser parte de este día tan importante en mi vida.
-  </p>
-</section>
+  <!-- CIERRE -->
+  <section class="section">
+    <img src="img/cierre.jpg" alt="Cierre">
+  </section>
 
-<!-- RSVP -->
-<section class="rsvp slide-up">
-  <h2>Confirmación</h2>
-  <p>Confirmá tu asistencia vía WhatsApp</p>
-  <strong>+54 9 3718 540093</strong>
-  <a href="#" class="btn">Confirmar asistencia</a>
-</section>
-
-<footer>
-  <p>Seguinos en Instagram ✨</p>
-</footer>
-
-<!-- MÚSICA -->
-<section class="music-player">
-  <button id="playButton" class="play-btn">▶️</button>
-  <audio id="bgMusic" src="musica.mp3"></audio>
-</section>
-
-<script>
-const targetDate = new Date("March 7, 2026 21:00:00").getTime();
-
-setInterval(() => {
-  const now = new Date().getTime();
-  const diff = targetDate - now;
-
-  document.getElementById("days").innerText = Math.max(0, Math.floor(diff / (1000*60*60*24)));
-  document.getElementById("hours").innerText = Math.max(0, Math.floor((diff / (1000*60*60)) % 24));
-  document.getElementById("minutes").innerText = Math.max(0, Math.floor((diff / 60000) % 60));
-  document.getElementById("seconds").innerText = Math.max(0, Math.floor((diff / 1000) % 60));
-}, 1000);
-
-const playButton = document.getElementById("playButton");
-const bgMusic = document.getElementById("bgMusic");
-
-playButton.addEventListener("click", () => {
-  if (bgMusic.paused) {
-    bgMusic.play();
-    playButton.textContent = "⏸️";
-    playButton.classList.add("playing");
-  } else {
-    bgMusic.pause();
-    playButton.textContent = "▶️";
-    playButton.classList.remove("playing");
-  }
-});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
+
