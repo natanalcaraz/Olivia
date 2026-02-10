@@ -1,55 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Olivia XV Años</title>
 
-  <!-- Fuente Signatie -->
-  <link href="https://fonts.cdnfonts.com/css/signatie" rel="stylesheet">
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- PORTADA -->
-  <section class="hero">
-    <img src="img/portada.jpg" alt="Olivia XV Años">
-  </section>
+<!-- PORTADA -->
+<section class="hero">
+  <img src="img/portada.jpg" alt="Portada Olivia">
+</section>
 
-  <!-- INVITACIÓN -->
-  <section class="section">
-    <img src="img/misa.jpg" alt="Invitación">
-  </section>
+<!-- INVITACIÓN -->
+<section class="section rosa">
+  <img src="img/flor-izq.png" class="flor flor-izq">
+  <img src="img/flor-der.png" class="flor flor-der">
 
-  <!-- RECEPCIÓN -->
-  <section class="section">
-    <img src="portadaprincipal.png" alt="Recepción">
-  </section>
+  <h2 class="script">Mis XV años</h2>
+  <h1 class="nombre">Olivia Caniza</h1>
 
-  <!-- GALERÍA -->
-  <section class="gallery">
-    <img src="img/galeria1.jpg">
-    <img src="img/galeria2.jpg">
-  </section>
+  <p class="texto">
+    Con la bendición de Dios y mis padres<br>
+    los invito a celebrar con nosotros
+  </p>
+</section>
 
-  <!-- COUNTDOWN -->
-  <section class="countdown">
-    <h2>Solo faltan</h2>
-    <div id="timer">
-      <span id="days">00</span>d :
-      <span id="hours">00</span>h :
-      <span id="minutes">00</span>m :
-      <span id="seconds">00</span>s
-    </div>
-  </section>
+<!-- MISA -->
+<section class="section rosa">
+  <img src="img/flor-izq.png" class="flor flor-izq">
 
-  <!-- CIERRE -->
-  <section class="section">
-    <img src="portadaprincipal.png" alt="Cierre">
-  </section>
+  <h2 class="script">Misa de acción de gracias</h2>
+  <p class="texto">
+    Miércoles 7 de Marzo de 2026<br>
+    19:30 hs
+  </p>
+
+  <a href="#" class="btn">Ver ubicación</a>
+</section>
+
+<!-- RECEPCIÓN -->
+<section class="section rosa">
+  <img src="img/flor-der.png" class="flor flor-der">
+
+  <h2 class="script">Recepción</h2>
+  <p class="texto">
+    21:00 hs<br>
+    Magnolia Multiespacio
+  </p>
+
+  <a href="#" class="btn">Ver ubicación</a>
+</section>
+
+<!-- CONTADOR -->
+<section class="section rosa contador">
+  <h2>Solo faltan</h2>
+
+  <div id="timer">
+    <div><span id="days">00</span><small>Días</small></div>
+    <div><span id="hours">00</span><small>Horas</small></div>
+    <div><span id="minutes">00</span><small>Min</small></div>
+    <div><span id="seconds">00</span><small>Seg</small></div>
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section class="hero">
+  <img src="img/portada.jpg" alt="Cierre">
+</section>
 
 <script src="script.js"></script>
 </body>
 </html>
-
