@@ -1,39 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Olivia XV Años</title>
+
+<!-- FUENTES -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url("hero.jpg") center/cover no-repeat;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+}
+
+.hero-content span {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+/* SECCIONES */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* ROSA */
+.rosa {
+  background-image: url("fondo-rosa.png");
+  background-repeat: repeat;
+  background-size: 320px auto;
+}
+
+/* TITULOS */
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+/* BOTON */
+button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: 1px solid #b79a6b;
+  background: transparent;
+  font-size: 0.9rem;
+  border-radius: 25px;
+}
+</style>
+</head>
+
 <body>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="overlay">
-    <p class="quote">Hay momentos inolvidables...</p>
+  <div class="hero-content">
+    <p>Hay momentos inolvidables...</p>
     <h1>Olivia</h1>
-    <span class="subtitle">XV años</span>
+    <span>XV años</span>
   </div>
 </section>
 
-<section class="section invitation">
-  <h3>Mis XV años</h3>
-  <h2>Olivia Caniza</h2>
-  <p>Con la bendición de Dios y mis padres...</p>
+<!-- INVITACIÓN -->
+<section class="section rosa">
+  <h2>Mis XV años</h2>
+  <h3>Olivia Caniza</h3>
+  <p>Con la bendición de Dios y mis padres, los invito a celebrar con nosotros.</p>
 </section>
 
-<section class="section event">
-  <h3>Misa de acción de gracias</h3>
+<!-- MISA -->
+<section class="section rosa">
+  <h2>Misa de acción de gracias</h2>
   <p>Miércoles 28 de Enero · 19:30 hs</p>
   <button>Ver ubicación</button>
 </section>
 
-<section class="photo-full"></section>
-
-<section class="section countdown">
-  <h3>¡Prepárate!</h3>
-  <div id="timer"></div>
+<!-- COUNTDOWN (placeholder visual) -->
+<section class="section rosa">
+  <h2>¡Prepárate!</h2>
+  <p>DÍAS · HORAS · MIN · SEG</p>
 </section>
 
-<section class="photo-final"></section>
-
 </body>
-
-<div id="timer">
-  <span><b id="days"></b> DÍAS</span>
-  <span><b id="hours"></b> HORAS</span>
-  <span><b id="minutes"></b> MIN</span>
-  <span><b id="seconds"></b> SEG</span>
-</div>
+</html>
