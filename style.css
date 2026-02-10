@@ -21,25 +21,9 @@ p {
 ================================ */
 
 .hero {
-  background-position: center top;
-}
-
-.hero .overlay {
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.25),
-    rgba(0,0,0,0.55)
-  );
-}
-
-.title {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.subtitle {
-  letter-spacing: 4px;
-  opacity: 0.95;
+  height: 100vh;
+  background: url("DSC_6656.png") center/cover no-repeat;
+  position: relative;
 }
 
 /* ================================
