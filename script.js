@@ -1,20 +1,41 @@
-<script>
-const targetDate = new Date("March 7, 2026 21:00:00").getTime();
+.hero {
+  height: 100vh;
+  background: url("images/hero.jpg") center/cover no-repeat;
+  position: relative;
+}
 
-const countdown = setInterval(() => {
-    const now = new Date().getTime();
-    const distance = targetDate - now;
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.4));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
 
-    if (distance < 0) {
-        clearInterval(countdown);
-        document.querySelector(".countdown").innerHTML = 
-            "<span style='font-size:2rem;color:white;'>¡Es hoy! 🎉💖</span>";
-        return;
-    }
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
 
-    document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
-    document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
-}, 1000);
-</script>
+.invitation,
+.event,
+.countdown {
+  background-image: url("images/fondo-rosa.png");
+  background-repeat: repeat;
+  background-size: 320px auto;
+}
+
+.photo-full {
+  height: 80vh;
+  background: url("images/foto1.jpg") center/cover no-repeat;
+}
+
+<div id="timer">
+  <span><b id="days"></b> DÍAS</span>
+  <span><b id="hours"></b> HORAS</span>
+  <span><b id="minutes"></b> MIN</span>
+  <span><b id="seconds"></b> SEG</span>
+</div>
