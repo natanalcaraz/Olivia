@@ -181,3 +181,10 @@ footer {
     font-size: 1.05rem;
   }
 }
+
+.hero h1,
+.hero .subtitle,
+.hero .date {
+  display: none;
+}
+
