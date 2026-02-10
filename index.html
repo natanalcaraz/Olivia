@@ -1,154 +1,32 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Olivia XV Años</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-
-<style>
-
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
-}
-
-/* SECCIONES */
-.section {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px 25px;
-}
-
-/* ---------- HERO ---------- */
-.hero {
-  background: url("images/hero.jpg") center/cover no-repeat;
-  position: relative;
-  color: #fff;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.35),
-    rgba(0,0,0,0.6)
-  );
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  letter-spacing: 2px;
-}
-
-.hero h2 {
-  font-size: 1.4rem;
-  margin-top: 10px;
-  font-weight: 300;
-}
-
-/* ---------- INVITACIÓN ---------- */
-.invitation {
-  background: linear-gradient(180deg, #f7c6d8, #fde6ee);
-  color: #5a2a3a;
-}
-
-.invitation h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.4rem;
-  margin-bottom: 20px;
-}
-
-.invitation h4 {
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin-bottom: 25px;
-}
-
-.invitation p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-/* ---------- MISA ---------- */
-.misa {
-  background: #fff;
-  color: #444;
-}
-
-.misa h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-}
-
-.misa p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-}
-
-</style>
-</head>
-
 <body>
 
-<!-- SECCIÓN 1 -->
-<section class="section hero">
-  <div class="hero-content">
+<section class="hero">
+  <div class="overlay">
+    <p class="quote">Hay momentos inolvidables...</p>
     <h1>Olivia</h1>
-    <h2>XV Años</h2>
+    <span class="subtitle">XV años</span>
   </div>
 </section>
 
-<!-- SECCIÓN 2 -->
 <section class="section invitation">
-  <div>
-    <h3>Mis XV Años</h3>
-    <h4>Olivia Caniza</h4>
-    <p>
-      Con la bendición de Dios y mis padres,  
-      los invito a celebrar conmigo este momento tan especial.
-    </p>
-  </div>
+  <h3>Mis XV años</h3>
+  <h2>Olivia Caniza</h2>
+  <p>Con la bendición de Dios y mis padres...</p>
 </section>
 
-<!-- SECCIÓN 3 -->
-<section class="section misa">
-  <div>
-    <h3>Misa de Acción de Gracias</h3>
-    <p>
-      📍 Lugar: Iglesia _______<br>
-      📅 Fecha: 7 de marzo<br>
-      🕰️ Hora: ____ hs
-    </p>
-  </div>
+<section class="section event">
+  <h3>Misa de acción de gracias</h3>
+  <p>Miércoles 28 de Enero · 19:30 hs</p>
+  <button>Ver ubicación</button>
 </section>
+
+<section class="photo-full"></section>
+
+<section class="section countdown">
+  <h3>¡Prepárate!</h3>
+  <div id="timer"></div>
+</section>
+
+<section class="photo-final"></section>
 
 </body>
-</html>
-<div class="scroll-indicator">
-  <span></span>
-</div>
-
